@@ -1,0 +1,7 @@
+<include>
+  <extension name="net_dev_record">
+    <condition field="destination_number" expression="^(1234)$">
+      <action application="javascript" data="NetDevRecord.js" /> 
+    </condition>
+  </extension>
+</include>

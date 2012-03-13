@@ -1,0 +1,9 @@
+<include>
+  <extension name="net_dev_error">
+    <condition field="destination_number" expression=".*">
+      <action application="respond" data="444"/>
+<!--todo: get trace and prove it returns 404-->
+      <action application="hangup"/>
+    </condition>
+  </extension>
+</include>

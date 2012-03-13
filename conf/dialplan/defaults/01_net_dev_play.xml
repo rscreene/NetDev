@@ -1,0 +1,7 @@
+<include>
+  <extension name="net_dev_play">
+    <condition field="destination_number" expression="^(5678)$">
+      <action application="javascript" data="NetDevPlay.js" /> 
+    </condition>
+  </extension>
+</include>
