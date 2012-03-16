@@ -1,0 +1,46 @@
+
+
+Dial 1234
+  Listen for welcome prompt
+  Enter 1111
+  Wait a few seconds
+  Ensure that the file <dir>/1111<extenstion> is written
+
+Dial 1234
+  Listen for welcome prompt
+  Enter 211
+  Wait for the timeout
+  Confirm that no file is written
+
+Dial 1234
+  Listen for welcome prompt
+  Enter 3*111
+  Wait for the timeout
+  Ensure that the file <dir>/3111<extenstion> is written
+
+Dial 1234
+  Listen for welcome prompt
+  Enter 1111
+  Wait a few seconds
+  Ensure that the file <dir>/1111<extenstion> is over-written
+
+Dial 5678
+  Listen for welcome prompt
+  Enter 1111
+  Ensure that the file <dir>/1111<extenstion> is played
+  Ensure that the file is played repeatedly until the caller hangs-up
+
+Dial 5678
+  Listen for welcome prompt
+  Enter 411
+  Wait a few seconds
+  Ensure that the call is terminated
+
+Dial 5678
+  Listen for welcome prompt
+  Enter 1*111
+  Ensure that the file <dir>/1111<extenstion> is played
+  Ensure that the file is played repeatedly until the caller hangs-up
+
+Dial 9999
+  Ensure that the call is terminated immediately with cause 404.
