@@ -1,7 +1,18 @@
 <include>
   <extension name="net_dev_record">
-    <condition field="destination_number" expression="^(1234)$">
-      <action application="javascript" data="NetDevRecord.js" /> 
-    </condition>
+      <condition field="destination_number" expression="^(1234)$">
+	<action application="answer" />
+	<action application="gentones" data="%(500,0,800)"/>
+	<action application="read_digits" data="4 digits 10000" />
+        <action application="record" data="/tmp/${digits}.wav" />
+      </condition>
   </extension>
 </include>
+
+<!-- I wanted to do something like this... -->
+
+<!--<condition field="${digits}" expression="^(\d{4})$">
+        <action application="record" data="/tmp/${digits}.wav" />
+      </condition>
+-->
+

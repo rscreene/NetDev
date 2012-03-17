@@ -1,6 +1,11 @@
 <include>
   <extension name="net_dev_play">
     <condition field="destination_number" expression="^(5678)$">
+      <action application="set_global" data="welcome-tone=%(750,0,1600)"/>
+      <action application="set_global" data="num-digits=4"/>
+      <action application="set_global" data="timeout=10000"/>
+      <action application="set_global" data="message-directory=/tmp"/>
+      <action application="set_global" data="message-extension=.wav"/>
       <action application="javascript" data="NetDevPlay.js" /> 
     </condition>
   </extension>
