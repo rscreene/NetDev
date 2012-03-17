@@ -13,7 +13,6 @@ Dial 1234
   Wait for the timeout
   Ensure that the timeout occurs exactly timeout msecs after the last digit
   Confirm that no file is written
-  FAIL: File is written
 
 Dial 1234
   Listen for 1234 welcome tone

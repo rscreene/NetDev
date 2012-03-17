@@ -4,15 +4,12 @@
 	<action application="answer" />
 	<action application="gentones" data="%(500,0,800)"/>
 	<action application="read_digits" data="4 digits 10000" />
+      </condition>
+      <!--I wanted to do this...-->
+      <!--<condition field="${digits}" expression="^(\d{4})$">-->
+      <condition field="${digits}" expression=".*">
         <action application="record" data="/tmp/${digits}.wav" />
       </condition>
   </extension>
 </include>
-
-<!-- I wanted to do something like this... -->
-
-<!--<condition field="${digits}" expression="^(\d{4})$">
-        <action application="record" data="/tmp/${digits}.wav" />
-      </condition>
--->
 
