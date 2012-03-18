@@ -1,50 +1,58 @@
 
-
-Dial 1234
+TEST 1
+  Dial 1234
   Listen for 1234 welcome tone
   Enter 1111
   Speak "1111"
   Hang-up
   Ensure that the file <dir>/1111<extension> is written
 
-Dial 1234
+TEST 2
+  Dial 1234
   Listen for 1234 welcome tone
   Enter 211
   Wait for the timeout
   Ensure that the timeout occurs exactly timeout msecs after the last digit
+  Ensure that the call is terminated
   Confirm that no file is written
 
-Dial 1234
+TEST 3
+  Dial 1234
   Listen for 1234 welcome tone
   Enter 3*111
   Speak "3111"
   Hang-up
   Ensure that the file <dir>/3111<extension> is written
 
-Dial 1234
+TEST 4
+  Dial 1234
   Listen for 1234 welcome tone
   Enter 1111
   Speak "1111"
   Hang-up
   Ensure that the file <dir>/1111<extension> is over-written
 
-Dial 5678
+TEST 5
+  Dial 5678
   Listen for 5678 welcome tone
   Enter 1111
   Ensure that the file <dir>/1111<extension> is played
   Ensure that the file is played repeatedly until the caller hangs-up
 
-Dial 5678
+TEST 6
+  Dial 5678
   Listen for 5678 welcome tone
   Enter 411
   Ensure that the timeout occurs exactly timeout msecs after the last digit
   Ensure that the call is terminated
 
-Dial 5678
+TEST 7
+  Dial 5678
   Listen for 5678 welcome tone
   Enter 1*111
   Ensure that the file <dir>/1111<extension> is played
   Ensure that the file is played repeatedly until the caller hangs-up
 
-Dial 9999
-  Ensure that the call is terminated immediately.
+TEST 8
+  Dial 9999
+  Ensure that the call is terminated immediately with response 404

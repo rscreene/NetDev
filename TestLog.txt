@@ -1,0 +1,23 @@
+Richard Screene 17/03/2012
+NetDev code
+Git commit 5cac99ff9bfba8b51b8e5f872ef5dd12542f342e
+
+TEST 1: Passed
+
+TEST 2: Failed
+  Call is not terminated and file is written.
+  Problem is in the XML dialplan but I'm not sure where!
+
+TEST 2: Passed
+
+TEST 3: Passed
+
+TEST 4: Passed
+
+TEST 5: Passed
+
+TEST 6: Passed
+
+TEST 7: Passed
+
+TEST 8: Passed
